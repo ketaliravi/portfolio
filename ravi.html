@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ravi's—Portfolio</title>
+
+    <style>
+        /* :root {
+            --bg: #0f1724;
+            --panel: #071826;
+            --accent: #06b6d4;
+            --accent2: #10b981;
+            --muted: #9aa8b3;
+        } */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Inter, sans-serif;
+        }
+
+        body {
+            background: white;
+            color: black;
+            padding-bottom: 40px;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(0, 0, 0, 0.35);
+            backdrop-filter: blur(6px);
+            padding: 12px 18px;
+            display: flex;
+            justify-content: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            z-index: 20;
+        }
+
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: var(--muted);
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        main {
+            max-width: 980px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 20px;
+            margin-top: 18px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 0.7s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1,
+        h2 {
+            margin-bottom: 8px;
+        }
+
+        h2 {
+            color: var(--accent);
+            font-size: 20px;
+        }
+
+        ul {
+            margin-left: 18px;
+            line-height: 1.6;
+        }
+
+        .skills-grid,
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 10px;
+            margin-top: 12px;
+        }
+ */
+        .pill {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 8px;
+            text-align: center;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            font-weight: 600;
+        }
+
+        .goal-box {
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            line-height: 1.5;
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media(max-width:600px) {
+            h1 {
+                font-size: 22px;
+            }
+
+            .card {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#hobbies">Hobbies</a>
+            <a href="#projects">Projects</a>
+            <a href="#goals">Goals</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- About -->
+        <div class="card" id="about">
+            <h1>K.R.S.V.Prasad</h1>
+            <h2>About Me</h2>
+            <p>
+                I'm a B.Tech IT student (2027) on a journey to become a MERN Stack Developer.
+                I learn by building fast, useful projects and improving them with real feedback.
+                My weekend delivery job keeps me disciplined, grounded and user-focused — a mindset I bring into my development work.
+            </p>
+        </div>
+
+        <!-- Skills -->
+        <div class="card" id="skills">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="pill">HTML</div>
+                <div class="pill">CSS</div>
+                <div class="pill">JavaScript</div>
+                <div class="pill">Python</div>
+            </div>
+        </div>
+
+        <div class="card" id="hobbies">
+            <h2>Hobbies</h2>
+            <ul>
+                <li>Creating small web projects</li>
+                <li>Exploring new technologies</li>
+                <li>Travelling nearby places</li>
+                <li>Sports</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Strengths</h2>
+            <ul>
+                <li>Fast learner with strong consistency</li>
+                <li>Good communication & teamwork</li>
+                <li>Adaptable — manage studies + work + learning</li>
+            </ul>
+        </div>
+
+        <!-- Projects -->
+        <div class="card" id="projects">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="pill">
+                    <strong>Hotel Booking Management CRUD</strong><br>
+                    Add / Edit / View / Delete bookings
+                </div>
+            </div>
+        </div>
+
+        <!-- Goals -->
+        <div class="card" id="goals">
+            <h2>Goals</h2>
+
+            <div class="goal-box">
+                <strong>Short Term:</strong> Complete MERN fundamentals & deploy 3 full-stack projects.
+            </div>
+            <div class="goal-box">
+                <strong>Mid Term:</strong> Land a developer internship & contribute to open-source.
+            </div>
+            <div class="goal-box">
+                <strong>Long Term:</strong> Become a product-focused MERN developer by 2027.
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="card" id="contact">
+            <h2>Contact</h2>
+            <p>Email: <strong style="color:var(--accent2)">ravishankar.ketali@sasi.ac.in</strong></p>
+            <p>Phone: <strong style="color:var(--accent2)">+91 9948867306</strong></p>
+            <p>GitHub: <strong style="color:var(--accent2)">github.com/raviketali</strong></p>
+
+            <button onclick="downloadResume()" style="
+            margin-top:12px; padding:10px 18px; border:0; 
+            background:white;
+            color: black; font-weight:800; border-radius:8px; cursor:pointer;">
+                Download Resume
+            </button>
+        </div>
+
+    </main>
+
+    <footer>
+        © <span id="year"></span> Ravi's — Portfolio
+    </footer>
+
+    <script>
+        document.getElementById("year").innerText = new Date().getFullYear();
+
+        function downloadResume() {
+            const text = `
+K.R.S.V.Prasad
+MERN Stack Developer
+
+About:
+B.Tech IT - 3rd year (2027). Passionate about full-stack development.
+
+Skills:
+HTML, CSS, JavaScript, React, Node, Express.
+
+Hobbies:
+Coding projects, tech videos, travelling, Sport.
+
+Strengths:
+Fast learner, teamwork, adaptability.
+
+Projects:
+ Hotel Booking Management CRUD App
+
+Goals:
+Short: Complete MERN & deploy projects.
+Mid: Internship & open-source.
+Long: Product-focused MERN developer by 2027.
+`;
+
+            const blob = new Blob([text], {
+                type: "text/plain"
+            });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = "Ravi's_Resume.txt";
+            a.click();
+        }
+    </script>
+
+</body>
+
+</html>
